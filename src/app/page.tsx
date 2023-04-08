@@ -1,9 +1,3 @@
-import { FC } from 'react';
-
-interface IHomeProps {}
-
-const Home: FC<IHomeProps> = ({}) => {
-  return <div>Home</div>;
-};
-
-export default Home;
+export default async function Home() {
+  return <div>Home Page</div>;
+}
