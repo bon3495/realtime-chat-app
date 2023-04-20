@@ -9,6 +9,7 @@
     "<THIRD_PARTY_MODULES>",
     "",
     "^types$",
+    "^@/types/(.*)$",
     "^@/components/(.*)$",
     "^@/ui/(.*)$",
     "^@/lib/(.*)$",

@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes } from 'react';
 import { cva, VariantProps } from 'class-variance-authority';
-import { Loader2 } from 'lucide-react';
 
+import { Icons } from '@/components/Icons';
 import { cn } from '@/lib/utils';
 
 export const buttonVariants = cva(
@@ -40,7 +40,7 @@ const Button = React.forwardRef<HTMLButtonElement, IButtonProps>(
         disabled={isLoading}
         className={cn(buttonVariants({ size, variant, className }))}
       >
-        {isLoading && <Loader2 className="w-4 h-4 mr-2 animate-spin" />}
+        {isLoading && <Icons.Loader2 className="w-4 h-4 mr-2 animate-spin" />}
         {children}
       </button>
     );
