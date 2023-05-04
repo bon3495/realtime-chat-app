@@ -4,6 +4,7 @@ import { FC, useState } from 'react';
 import Link from 'next/link';
 
 import { Icons } from '@/components/Icons';
+import UnseenCounts from '@/components/ui/UnseenCounts';
 
 interface IFriendRequestsSidebarOptionsProps {
   initialUnseenRequestCount: number;
@@ -29,9 +30,7 @@ const FriendRequestsSidebarOptions: FC<IFriendRequestsSidebarOptionsProps> = ({
       <span className="truncate">Friend Requests</span>
 
       {unseenRequestCount > 0 ? (
-        <span className="flex items-center justify-center w-5 h-5 text-xs text-white bg-indigo-600 rounded-full">
-          {unseenRequestCount}
-        </span>
+        <UnseenCounts>{unseenRequestCount}</UnseenCounts>
       ) : null}
     </Link>
   );
